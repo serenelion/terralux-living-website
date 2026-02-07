@@ -126,11 +126,14 @@ h4 { font-size: 22px; }
     align-items: center;
 }
 
-.brand-name {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--terralux-green);
-    letter-spacing: -0.3px;
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 32px;
+    width: auto;
 }
 
 .nav-cta {
@@ -548,10 +551,11 @@ h4 { font-size: 22px; }
     margin-bottom: var(--space-xl);
 }
 
-.footer-brand h3 {
-    color: var(--white);
-    font-size: 28px;
-    margin-bottom: var(--space-sm);
+.footer-logo {
+    height: 48px;
+    width: auto;
+    margin: 0 auto var(--space-md);
+    display: block;
 }
 
 .footer-brand p {
