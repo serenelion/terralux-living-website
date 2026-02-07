@@ -390,6 +390,25 @@ h4 { font-size: 22px; }
     line-height: 1.6;
 }
 
+.location-section-full {
+    margin-top: var(--space-xl);
+    text-align: center;
+}
+
+.location-section-full .location-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.location-section-full .location-list li {
+    display: inline;
+    padding: var(--space-xs) var(--space-md);
+}
+
 /* Membership Card */
 .membership-card {
     background: var(--white);
