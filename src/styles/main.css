@@ -132,7 +132,7 @@ h4 { font-size: 22px; }
 }
 
 .nav-logo {
-    height: 32px;
+    height: 48px;
     width: auto;
 }
 
@@ -409,6 +409,14 @@ h4 { font-size: 22px; }
     padding: var(--space-xs) var(--space-md);
 }
 
+.future-network-list {
+    color: var(--gray-600);
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 /* Membership Card */
 .membership-card {
     background: var(--white);
@@ -571,7 +579,7 @@ h4 { font-size: 22px; }
 }
 
 .footer-logo {
-    height: 48px;
+    height: 64px;
     width: auto;
     margin: 0 auto var(--space-md);
     display: block;
