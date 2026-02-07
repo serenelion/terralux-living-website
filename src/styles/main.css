@@ -133,24 +133,6 @@ h4 { font-size: 22px; }
     letter-spacing: -0.3px;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: var(--space-lg);
-}
-
-.nav-links a {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--gray-900);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.nav-links a:hover {
-    color: var(--terralux-green);
-}
-
 .nav-cta {
     background: var(--terralux-gold) !important;
     color: var(--terralux-green) !important;
@@ -158,6 +140,8 @@ h4 { font-size: 22px; }
     border-radius: 6px;
     transition: all 0.2s !important;
     font-weight: 600 !important;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 .nav-cta:hover {
@@ -637,10 +621,6 @@ h4 { font-size: 22px; }
     h3 { font-size: 24px; }
     
     .hero-title { font-size: 36px; }
-    
-    .nav-links {
-        display: none;
-    }
     
     .pillars,
     .benefits-grid,
