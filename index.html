@@ -3,230 +3,362 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TerraLux Living: A lifestyle membership connecting you to healing homes, biohacking centers, regenerative villages, and a curated benefits network worldwide.">
-    <title>TerraLux Living | Lifestyle Membership for Conscious Creators</title>
-    <link rel="icon" type="image/svg+xml" href="src/assets/terralux-logomark.svg">
+    <meta name="description" content="Join the founding community of TerraLux Living. The Scout Membership—your entry into a global lifestyle ecosystem of healing homes, biohacking centers, and conscious creators building the future.">
+    <title>TerraLux Living | The Scout Membership</title>
+    <link rel="icon" type="image/svg+xml" href="src/assets/terralux-living-logomark-official.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/main.css">
 </head>
 <body>
-    <!-- Persistent Header -->
-    <nav class="nav">
-        <div class="nav-inner">
-            <div class="nav-brand">
-                <img src="src/assets/terralux-logo.svg" alt="TerraLux Living" class="nav-logo">
-            </div>
-            <a href="#apply" class="nav-cta">Apply Now</a>
-        </div>
-    </nav>
-    
     <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Live Inside<br/>The Future of Wellness</h1>
-            <p class="hero-subtitle">TerraLux Living is a global lifestyle membership connecting conscious creators to healing homes, biohacking centers, regenerative villages, and a curated benefits network across 15+ locations worldwide</p>
-            <div class="hero-cta">
-                <a href="#apply" class="btn btn-primary btn-large">Apply Now</a>
-                <a href="#benefits" class="btn btn-secondary">See the Benefits</a>
+    <main class="hero">
+        <div class="hero-pattern"></div>
+        <div class="container">
+            <div class="hero-content">
+                <img src="src/assets/terralux-living-logo-official.svg" alt="TerraLux Living" class="hero-logo">
+                
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    <span>Founding Members • The Scout Membership</span>
+                </div>
+                
+                <h1 class="hero-title">Homes That Heal.<br/>A Community That Builds the Future.</h1>
+                
+                <p class="hero-subtitle">
+                    Where you live shapes who you become. TerraLux Living is a global lifestyle membership gathering conscious creators around healing homes, biohacking centers, regenerative villages, and the tribe launching the future.
+                </p>
+
+                <div class="hero-pillars">
+                    <div class="pillar">
+                        <div class="pillar-icon">🏡</div>
+                        <div class="pillar-label">Healing Homes</div>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">🧬</div>
+                        <div class="pillar-label">Biohacking</div>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">🌍</div>
+                        <div class="pillar-label">Global Access</div>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">✨</div>
+                        <div class="pillar-label">Movement</div>
+                    </div>
+                </div>
+
+                <!-- Scout Membership Form -->
+                <div class="membership-form-container">
+                    <h2 class="form-title">Join The Scout Membership Waitlist</h2>
+                    <p class="form-description">
+                        The Scout is your entry into the TerraLux ecosystem. Be among the first to access our digital wellness platform, global benefits network, and founding community as we launch from NYC to the world.
+                    </p>
+                    
+                    <form name="terralux-scout-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="membership-form">
+                        <input type="hidden" name="form-name" value="terralux-scout-waitlist" />
+                        
+                        <!-- Honeypot -->
+                        <p style="display: none;">
+                            <label>Don't fill this out: <input name="bot-field" /></label>
+                        </p>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Full Name *" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Email Address *" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone (optional)">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="location" name="location" placeholder="Current Location *" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="interest" name="interest" required>
+                                <option value="">What draws you to TerraLux Living? *</option>
+                                <option value="healing-homes">Healing Homes & Wellness Design</option>
+                                <option value="biohacking">Biohacking & Performance</option>
+                                <option value="villages">Regenerative Villages & Community</option>
+                                <option value="global-access">Global Lifestyle Access</option>
+                                <option value="movement">Joining the Movement</option>
+                                <option value="all">All of the Above</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="about" name="about" rows="3" placeholder="Tell us a bit about yourself and what you're building... *" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Join The Scout Waitlist</button>
+                        
+                        <p class="form-note">
+                            ✓ Founding member priority access<br>
+                            ✓ Early invitations to launch experiences<br>
+                            ✓ No commitment, unsubscribe anytime
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Trust Signals -->
+                <div class="trust-signals">
+                    <div class="trust-item">
+                        <strong>15+</strong>
+                        <span>Global Locations</span>
+                    </div>
+                    <div class="trust-item">
+                        <strong>Curated</strong>
+                        <span>Invitation-Only</span>
+                    </div>
+                    <div class="trust-item">
+                        <strong>Movement</strong>
+                        <span>Not a Club</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </main>
 
-    <!-- Mission -->
-    <section class="section section-cream">
+    <!-- What is The Scout -->
+    <section class="scout-intro">
         <div class="container-narrow">
-            <h2 class="section-title">Your Health. Your Wealth. Your Legacy.</h2>
-            <p class="body-large" style="text-align: center;">TerraLux Living is for builders, investors, and conscious creators who know that <strong>where you live shapes who you become.</strong> We're not a club—we're a global network of healing homes, wellness villages, and curated experiences designed to support your highest performance, deepest restoration, and longest healthspan.</p>
-            <p style="text-align: center; margin-top: 24px; color: var(--gray-600); font-size: 17px;">Members gain priority access to regenerative architecture, biohacking centers, transformative experiences, and a tribe of aligned creators worldwide.</p>
+            <h2 class="section-title">The Scout Membership</h2>
+            <p class="section-subtitle">Your entry into the TerraLux ecosystem—digital wellness, global benefits, and the founding community building the future of living.</p>
+            
+            <div class="scout-features">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Digital Wellness Platform</h3>
+                    <p>Track your home's wellness metrics through the TerraLux Home App. Plant-based sensors monitor air quality, light, water—turning your living space into a health optimization system.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎟️</div>
+                    <h3>Global Benefits Network</h3>
+                    <p>Priority access and member rates across biohacking centers, wellness retreats, regenerative villages, and curated experiences at 15+ locations worldwide.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Founding Community</h3>
+                    <p>Connect with builders, creatives, and conscious operators. Virtual events, educational content, and early access to new locations before public launch.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⬆️</div>
+                    <h3>Clear Upgrade Path</h3>
+                    <p>Priority access to upgrade to The Rider ($360/mo) and The Steward ($1,000/mo) tiers as physical locations activate. Founding Scouts always come first.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Benefits Network -->
-    <section id="benefits" class="section section-light">
+    <!-- Phase I: NYC x Catskills -->
+    <section class="phase-one">
         <div class="container">
-            <h2 class="section-title">Save Money. Spend Your Time Better.</h2>
-            <p class="section-intro">TerraLux Living members save thousands annually and gain priority access to wellness experiences, healing homes, and regenerative villages worldwide</p>
+            <div class="phase-content">
+                <div class="phase-text">
+                    <span class="phase-label">Phase I — Live Now</span>
+                    <h2>NYC × Catskills</h2>
+                    <p class="phase-intro">The Scout Membership launches as part of our Phase I foundation: Manhattan biohacking, Catskills wellness retreat, and urban mobility—creating a complete lifestyle loop.</p>
+                    
+                    <div class="phase-locations">
+                        <div class="location-item">
+                            <strong>🧬 Midtown Biohacking</strong>
+                            <p>Madison Ave, Manhattan—Dr. Chuck Morris's premier biohacking center for performance optimization.</p>
+                        </div>
+                        
+                        <div class="location-item">
+                            <strong>🌲 Galway Wellness Club</strong>
+                            <p>165 Galway Rd, Windham, NY—Our flagship Catskills retreat for recovery, longevity, and reset.</p>
+                        </div>
+                        
+                        <div class="location-item">
+                            <strong>🛴 Urban Mobility</strong>
+                            <p>Manhattan riding membership through Inokim's electric scooter network.</p>
+                        </div>
+                    </div>
+                    
+                    <p class="phase-tagline"><strong>Move better. Perform better. Recover better.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Network -->
+    <section class="global-network">
+        <div class="container">
+            <h2 class="section-title">Your Global Network</h2>
+            <p class="section-subtitle">Scout members receive priority access to all current and future TerraLux locations, services, and partner experiences worldwide.</p>
+            
+            <div class="network-grid">
+                <div class="network-group">
+                    <h3>Owned & Operated</h3>
+                    <ul>
+                        <li>Catskills, New York</li>
+                        <li>Dominican Republic</li>
+                        <li>Greece</li>
+                    </ul>
+                </div>
+                
+                <div class="network-group">
+                    <h3>Live & Strategic Partners</h3>
+                    <ul>
+                        <li>Manhattan — Midtown Biohacking</li>
+                        <li>Atlanta — Biohacking & Creative Hub</li>
+                        <li>Santa Barbara — Wellness Retreats</li>
+                    </ul>
+                </div>
+                
+                <div class="network-group">
+                    <h3>Cultural & Luxury Access</h3>
+                    <ul>
+                        <li>Monaco / Monte Carlo</li>
+                        <li>Private culinary experiences</li>
+                        <li>Invitation-only events</li>
+                    </ul>
+                </div>
+                
+                <div class="network-group network-group-full">
+                    <h3>Future Expansion</h3>
+                    <p class="future-locations">Costa Rica • Portugal • Italy • Croatia • Malta • Kuwait • Dubai • Qatar • Saudi Arabia</p>
+                </div>
+            </div>
+            
+            <p class="network-note"><em>Access, availability, and inclusions vary by location. Priority access does not.</em></p>
+        </div>
+    </section>
+
+    <!-- Benefits Preview -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Scout Member Benefits</h2>
+            <p class="section-subtitle">Save thousands annually across wellness, lifestyle experiences, and home transformation services</p>
             
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <h4>🏘️ Village Access & Retreats</h4>
+                    <div class="benefit-icon">🧬</div>
+                    <h4>Midtown Biohacking</h4>
+                    <p><strong>Member rates and priority booking</strong></p>
+                    <p>Advanced biohacking and performance optimization at Manhattan's premier wellness center.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏘️</div>
+                    <h4>Village Mastermind Events</h4>
                     <p><strong>Integrative Organizing</strong></p>
-                    <p>50% off all mastermind events including Village Creator Mastermind</p>
-                    <a href="https://integrativeorganizing.space" target="_blank">integrativeorganizing.space</a>
+                    <p>50% off all mastermind events including Village Creator Mastermind and regenerative living workshops.</p>
                 </div>
                 
                 <div class="benefit-card">
-                    <h4>🧬 Biohacking & Wellness</h4>
-                    <p><strong>Midtown Biohack</strong></p>
-                    <p>Priority booking and member rates at Manhattan's premier biohacking center</p>
-                    <a href="https://midtownbiohack.com" target="_blank">midtownbiohack.com</a>
-                </div>
-                
-                <div class="benefit-card">
-                    <h4>🌍 Regenerative Villages</h4>
+                    <div class="benefit-icon">🌍</div>
+                    <h4>Regenerative Villages</h4>
                     <p><strong>Oya New Earth</strong></p>
-                    <p>Early access to village launches and community land trust opportunities</p>
-                    <a href="https://oyanewearth.com" target="_blank">oyanewearth.com</a>
+                    <p>Early access to village launches and community land trust opportunities worldwide.</p>
                 </div>
                 
                 <div class="benefit-card">
-                    <h4>💼 Executive Healing</h4>
-                    <p><strong>Executive Healing</strong></p>
-                    <p>Member pricing on leadership retreats and transformation programs</p>
-                    <a href="https://executive-healing.com" target="_blank">executive-healing.com</a>
+                    <div class="benefit-icon">💼</div>
+                    <h4>Executive Healing</h4>
+                    <p><strong>Leadership Transformation</strong></p>
+                    <p>Member pricing on leadership retreats and executive transformation programs.</p>
                 </div>
                 
                 <div class="benefit-card">
-                    <h4>🛴 Future Mobility</h4>
-                    <p><strong>Inokim</strong></p>
-                    <p>Exclusive access to electric scooter and e-bike membership programs</p>
-                    <a href="https://inokim.shop" target="_blank">inokim.shop</a>
-                </div>
-                
-                <div class="benefit-card">
-                    <h4>🏡 Intelligent Homes</h4>
+                    <div class="benefit-icon">🏡</div>
+                    <h4>Homes That Heal</h4>
                     <p><strong>TerraLux Home</strong></p>
-                    <p>Priority consultation and member pricing on home design and builds</p>
-                    <a href="https://terraluxhome.com" target="_blank">terraluxhome.com</a>
+                    <p>20% discount on Starter Kits, wellness design consultations, and home transformation services.</p>
                 </div>
                 
                 <div class="benefit-card">
-                    <h4>🍳 European Luxury</h4>
-                    <p><strong>German Kitchen Center</strong></p>
-                    <p>Exclusive access to premium German kitchen and cabinetry design</p>
-                    <a href="https://germankitchencenter.com" target="_blank">germankitchencenter.com</a>
-                </div>
-                
-                <div class="benefit-card">
-                    <h4>🗺️ Immersive Experiences</h4>
+                    <div class="benefit-icon">🗺️</div>
+                    <h4>Immersive Experiences</h4>
                     <p><strong>The Spatial Network</strong></p>
-                    <p>Early access to immersive village tours and spatial storytelling tools</p>
-                    <a href="https://thespatialnetwork.net" target="_blank">thespatialnetwork.net</a>
+                    <p>Early access to immersive village tours and spatial storytelling tools before public release.</p>
                 </div>
                 
                 <div class="benefit-card">
-                    <h4>📺 Conscious Media</h4>
+                    <div class="benefit-icon">🛴</div>
+                    <h4>Urban Mobility</h4>
+                    <p><strong>Inokim Manhattan</strong></p>
+                    <p>Access to electric scooter and e-bike membership programs for sustainable city living.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🍳</div>
+                    <h4>European Design</h4>
+                    <p><strong>German Kitchen Center</strong></p>
+                    <p>Exclusive access to premium German kitchen and cabinetry design consultations.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">📺</div>
+                    <h4>Conscious Media</h4>
                     <p><strong>XZEN TV</strong></p>
-                    <p>Complimentary access to transformational content and member exclusives</p>
-                    <a href="https://xzen.tv" target="_blank">xzen.tv</a>
+                    <p>Complimentary access to transformational content and member-exclusive programming.</p>
                 </div>
             </div>
             
             <p style="margin-top: 48px; text-align: center; font-size: 16px; color: var(--gray-600);">
-                <strong>More partners joining quarterly.</strong> Members receive priority access to all new additions before public release.
+                <strong>More partners joining quarterly.</strong> Scout members receive priority access to all new additions before public release.
             </p>
         </div>
     </section>
 
-    <!-- Global Locations -->
-    <section class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Your Global Network</h2>
-            <p class="section-intro">Priority access to TerraLux villages, wellness clubs, and partner experiences worldwide</p>
+    <!-- The Movement -->
+    <section class="movement">
+        <div class="container-narrow">
+            <h2 class="section-title">This Is Not a Membership.<br/>It's a Movement.</h2>
+            <p class="movement-intro">
+                Terra Lux is gathering a tribe. Builders, creatives, operators, and visionaries who understand that health is infrastructure, environment shapes outcomes, and the future is launched by communities—not institutions.
+            </p>
             
-            <div class="locations-grid">
-                <div class="location-section">
-                    <h3>Live Now</h3>
-                    <ul class="location-list">
-                        <li><strong>Dominican Republic</strong> — Caribbean wellness village</li>
-                        <li><strong>Catskills, NY</strong> — Galway Wellness Club & Big Hollow Greene</li>
-                        <li><strong>Manhattan, NY</strong> — Midtown Biohack</li>
-                    </ul>
+            <div class="movement-principles">
+                <div class="principle">
+                    <div class="principle-icon">🏡</div>
+                    <h4>Homes That Heal</h4>
+                    <p>Your living space becomes a longevity system—tracking air, light, water, and wellness through intelligent monitoring.</p>
                 </div>
                 
-                <div class="location-section">
-                    <h3>Launching 2026-2027</h3>
-                    <ul class="location-list">
-                        <li><strong>Monaco / Monte Carlo</strong> — Private culinary & cultural experiences</li>
-                        <li><strong>Santa Barbara, CA</strong> — Wellness retreats</li>
-                        <li><strong>Atlanta, GA</strong> — Biohacking & creative hub</li>
-                    </ul>
+                <div class="principle">
+                    <div class="principle-icon">🌱</div>
+                    <h4>Health as Infrastructure</h4>
+                    <p>Wellness isn't a service you purchase—it's the foundation of how you live, built into your home and daily patterns.</p>
+                </div>
+                
+                <div class="principle">
+                    <div class="principle-icon">🤝</div>
+                    <h4>Community Launches the Future</h4>
+                    <p>The people who join now shape the culture, set the standard, and receive priority access forever.</p>
                 </div>
             </div>
             
-            <div class="location-section location-section-full">
-                <h3>Future Network</h3>
-                <p class="future-network-list">Greece • Costa Rica • Portugal • Italy • Croatia • Malta • Kuwait • Dubai • Qatar • Saudi Arabia</p>
-            </div>
-            
-            <p style="margin-top: 32px; text-align: center; font-style: italic; color: var(--gray-600);">
-                Be a member of the global organizing platform building the future of wellness.
+            <p class="movement-closing">
+                By joining as a Founding Scout, you're not purchasing access.<br>
+                <strong>You're joining the group that is coming together to launch the future of living.</strong>
             </p>
         </div>
     </section>
 
-    <!-- Application -->
-    <section id="apply" class="section section-green">
-        <div class="container-narrow">
-            <h2 class="section-title" style="color: white;">Apply for Membership</h2>
-            <p class="section-intro" style="color: rgba(255,255,255,0.85);">TerraLux Living is <strong>invitation-only</strong> for conscious creators, builders, and visionaries aligned with regenerative living</p>
-            
-            <div class="application-form">
-                <form name="terralux-living-application" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="terralux-living-application" />
-                    
-                    <!-- Honeypot -->
-                    <p style="display: none;">
-                        <label>Don't fill this out: <input name="bot-field" /></label>
-                    </p>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="location">Current Location *</label>
-                            <input type="text" id="location" name="location" placeholder="City, Country" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="role">Your Primary Role *</label>
-                        <select id="role" name="role" required>
-                            <option value="">Select...</option>
-                            <option value="developer">Real Estate Developer</option>
-                            <option value="investor">Impact Investor</option>
-                            <option value="entrepreneur">Entrepreneur / Founder</option>
-                            <option value="creative">Creative Professional</option>
-                            <option value="executive">Executive / Leader</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="work">What are you building? *</label>
-                        <textarea id="work" name="work" rows="4" required placeholder="Describe your work, company, or project..."></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="why">Why TerraLux Living? *</label>
-                        <textarea id="why" name="why" rows="4" required placeholder="What draws you to this community and ecosystem?"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="referral">How did you hear about TerraLux Living?</label>
-                        <input type="text" id="referral" name="referral" placeholder="Referral, partner, event, etc.">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-gold btn-large" style="width: 100%;">Submit Application</button>
-                    <p class="form-note" style="color: rgba(255,255,255,0.75);">We review all applications personally and respond within 5 business days. Membership is limited to maintain community quality and intimacy.</p>
-                </form>
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Become a Founding Scout</h2>
+                <p>This community will never be this small again. Join the waitlist to receive priority access when The Scout Membership launches.</p>
+                <a href="#" class="btn-primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Join the Waitlist</a>
+                <p class="cta-note">Priority invitations • Early access • Permanent founding status</p>
             </div>
         </div>
     </section>
@@ -234,47 +366,44 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-brand">
-                <img src="src/assets/terralux-logo.svg" alt="TerraLux" class="footer-logo">
-                <p>Homes That Heal. A Community That Builds the Future.</p>
-            </div>
-            
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Ecosystem</h4>
-                    <ul>
-                        <li><a href="https://terraluxhome.com" target="_blank">TerraLux Home</a></li>
-                        <li><a href="https://thespatialnetwork.net" target="_blank">TerraLux Tech</a></li>
-                        <li><a href="https://integrativeorganizing.space" target="_blank">TerraLux Living</a></li>
-                        <li><a href="https://midtownbiohack.com" target="_blank">TerraLux Health</a></li>
-                    </ul>
+            <div class="footer-content">
+                <img src="src/assets/terralux-living-logo-official.svg" alt="TerraLux Living" class="footer-logo">
+                <p class="footer-tagline">Homes That Heal. A Community That Builds the Future.</p>
+                
+                <div class="footer-links">
+                    <a href="https://terra-lux.org" target="_blank">Terra-Lux.org</a>
+                    <span>•</span>
+                    <a href="https://terraluxhome.com" target="_blank">TerraLux Home</a>
+                    <span>•</span>
+                    <a href="mailto:membership@terraluxliving.com">membership@terraluxliving.com</a>
                 </div>
                 
-                <div class="footer-section">
-                    <h4>Partners</h4>
-                    <ul>
-                        <li><a href="https://oyanewearth.com" target="_blank">Oya New Earth</a></li>
-                        <li><a href="https://executive-healing.com" target="_blank">Executive Healing</a></li>
-                        <li><a href="https://inokim.shop" target="_blank">Inokim</a></li>
-                        <li><a href="https://xzen.tv" target="_blank">XZEN TV</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="mailto:membership@terraluxliving.com">membership@terraluxliving.com</a></li>
-                        <li><a href="https://terra-lux.org" target="_blank">Terra-Lux.org</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>© 2026 TerraLux Living. A global lifestyle membership for conscious creators.</p>
+                <p class="footer-copyright">© 2026 TerraLux Living. A global lifestyle membership for conscious creators.</p>
+                <p class="footer-note">Curated • Invitation-Only • Movement-Driven</p>
             </div>
         </div>
     </footer>
 
-    <script src="src/scripts/main.js"></script>
+    <script>
+        // Form submission confirmation
+        const form = document.querySelector('.membership-form');
+        form.addEventListener('submit', function(e) {
+            console.log('Scout Waitlist form submitted');
+        });
+        
+        // Smooth scroll for CTA
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
