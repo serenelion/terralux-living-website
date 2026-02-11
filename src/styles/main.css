@@ -1,12 +1,8 @@
 /* ==========================================
-   TERRALUX LIVING SYSTEMS
+   TERRALUX LIVING — SIMPLIFIED
    Official Brand: Gold #d8b670 + Green #455643
-   Mobile-First, Flawless Responsive Design
+   Clean, Clear, Compelling
    ========================================== */
-
-/* ===========================================
-   Design System & Variables
-   =========================================== */
 
 :root {
     /* Brand Colors */
@@ -22,7 +18,6 @@
     /* Neutrals */
     --white: #FFFFFF;
     --cream: #FAF8F5;
-    --cream-dark: #f5f3ed;
     --gray-50: #F9F9FA;
     --gray-100: #E8E9EA;
     --gray-200: #D1D3D4;
@@ -33,15 +28,12 @@
     --shadow-sm: 0 1px 3px rgba(69, 86, 67, 0.06);
     --shadow-md: 0 4px 12px rgba(69, 86, 67, 0.08);
     --shadow-lg: 0 8px 24px rgba(69, 86, 67, 0.12);
-    --shadow-xl: 0 12px 32px rgba(69, 86, 67, 0.16);
     
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-secondary: 'Lora', Georgia, serif;
     
-    /* Fluid Spacing (Mobile → Desktop) */
-    --space-3xs: clamp(0.25rem, 0.5vw, 0.5rem);
-    --space-2xs: clamp(0.5rem, 1vw, 0.75rem);
+    /* Fluid Spacing */
     --space-xs: clamp(0.75rem, 1.5vw, 1rem);
     --space-sm: clamp(1rem, 2vw, 1.25rem);
     --space-md: clamp(1.25rem, 2.5vw, 1.5rem);
@@ -52,13 +44,11 @@
     --space-4xl: clamp(5rem, 8vw, 6rem);
     
     /* Layout */
-    --container-max: 1240px;
+    --container-max: 1200px;
     --container-narrow: 720px;
-    --container-wide: 1400px;
     
     /* Transitions */
     --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ===========================================
@@ -74,7 +64,6 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
-    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -84,7 +73,6 @@ body {
     color: var(--gray-900);
     background: var(--cream);
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -106,21 +94,20 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     letter-spacing: -0.02em;
 }
 
 h2 {
-    font-size: clamp(1.75rem, 4vw, 2.75rem);
-    letter-spacing: -0.01em;
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 
 h3 {
-    font-size: clamp(1.375rem, 3vw, 1.875rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 h4 {
-    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 }
 
 strong {
@@ -129,7 +116,7 @@ strong {
 }
 
 /* ===========================================
-   Layout Containers
+   Layout
    =========================================== */
 
 .container {
@@ -144,16 +131,6 @@ strong {
     padding-inline: var(--space-lg);
 }
 
-.container-wide {
-    max-width: var(--container-wide);
-    margin-inline: auto;
-    padding-inline: var(--space-lg);
-}
-
-/* ===========================================
-   Section Utilities
-   =========================================== */
-
 section {
     padding-block: var(--space-4xl);
 }
@@ -161,8 +138,6 @@ section {
 .section-title {
     text-align: center;
     margin-bottom: var(--space-md);
-    max-width: 48rem;
-    margin-inline: auto;
 }
 
 .section-lead {
@@ -175,7 +150,8 @@ section {
     margin-bottom: var(--space-2xl);
 }
 
-.section-label {
+.section-label,
+.section-label-white {
     display: inline-block;
     font-size: 0.875rem;
     font-weight: 600;
@@ -186,17 +162,11 @@ section {
 }
 
 .section-label-white {
-    display: inline-block;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--terra-gold);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: var(--space-md);
+    color: var(--white);
 }
 
 /* ===========================================
-   Hero Section
+   Hero
    =========================================== */
 
 .hero {
@@ -218,11 +188,10 @@ section {
     background-repeat: repeat;
     background-size: 300px;
     opacity: 0.03;
-    pointer-events: none;
 }
 
 .hero-container {
-    max-width: 56rem;
+    max-width: 48rem;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -259,8 +228,8 @@ section {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(0.9); }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
 }
 
 .hero-title {
@@ -273,15 +242,9 @@ section {
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--space-xl);
-    max-width: 48rem;
-    margin-inline: auto;
 }
 
 .hero-cta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-md);
-    justify-content: center;
     margin-bottom: var(--space-md);
 }
 
@@ -295,7 +258,6 @@ section {
    =========================================== */
 
 .btn-primary,
-.btn-secondary,
 .btn-submit {
     display: inline-block;
     padding: var(--space-sm) var(--space-xl);
@@ -308,28 +270,15 @@ section {
     cursor: pointer;
     transition: all var(--transition);
     text-align: center;
-    line-height: 1.5;
-}
-
-.btn-primary {
     background: var(--terra-gold);
     color: var(--terra-green);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-submit:hover {
     background: var(--gold-light);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px var(--gold-glow);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--white);
-    border: 2px solid var(--white);
-}
-
-.btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
 }
 
 .btn-large {
@@ -339,142 +288,63 @@ section {
 
 .btn-submit {
     width: 100%;
-    background: var(--terra-gold);
-    color: var(--terra-green);
-}
-
-.btn-submit:hover {
-    background: var(--gold-light);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px var(--gold-glow);
 }
 
 /* ===========================================
-   Value Proposition Section
+   Value Section
    =========================================== */
 
-.value-prop {
+.value {
     background: var(--white);
 }
 
-.conditions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-    gap: var(--space-xl);
-}
-
-.condition-card {
-    text-align: center;
-    padding: var(--space-xl);
-    background: var(--cream);
-    border-radius: 12px;
-    border: 1px solid var(--gray-100);
-    transition: all var(--transition);
-}
-
-.condition-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-.condition-icon {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    margin-bottom: var(--space-md);
-}
-
-.condition-card h3 {
-    margin-bottom: var(--space-xs);
-}
-
-.condition-metric {
-    font-size: 0.875rem;
-    color: var(--terra-gold);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--space-sm);
-}
-
-.condition-card p {
-    color: var(--gray-600);
-    line-height: 1.7;
-    margin: 0;
-}
-
-/* ===========================================
-   Environmental Section
-   =========================================== */
-
-.environmental {
-    background: var(--gray-50);
-}
-
-.environmental-content {
-    max-width: 48rem;
-    margin-inline: auto;
-}
-
-.environmental-text {
-    text-align: center;
-}
-
-.environmental-lead {
-    font-size: clamp(1.0625rem, 2vw, 1.25rem);
-    color: var(--gray-600);
-    margin-bottom: var(--space-2xl);
-    line-height: 1.7;
-}
-
-.environmental-metrics {
-    display: grid;
-    gap: var(--space-lg);
-    text-align: left;
-    margin-bottom: var(--space-xl);
-}
-
-.metric-item {
-    padding: var(--space-lg);
-    background: var(--white);
-    border-radius: 8px;
-    border: 1px solid var(--gray-100);
-}
-
-.metric-item strong {
-    display: block;
-    font-size: 1.125rem;
-    color: var(--terra-green);
-    margin-bottom: var(--space-xs);
-}
-
-.metric-item p {
-    color: var(--gray-600);
-    line-height: 1.7;
-    margin: 0;
-}
-
-.environmental-closing {
-    font-size: 1.125rem;
-    text-align: center;
-    color: var(--gray-900);
-}
-
-/* ===========================================
-   How It Works Section
-   =========================================== */
-
-.how-it-works {
-    background: var(--cream);
-}
-
-.steps-grid {
+.value-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
     gap: var(--space-xl);
 }
 
-.step-card {
+.value-card {
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--cream);
+    border-radius: 12px;
+    border: 1px solid var(--gray-100);
+}
+
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+}
+
+.value-card h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.value-card p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ===========================================
+   How It Works
+   =========================================== */
+
+.how {
+    background: var(--gray-50);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: var(--space-xl);
+}
+
+.step {
     position: relative;
     padding: var(--space-xl);
+    padding-top: var(--space-2xl);
     background: var(--white);
     border-radius: 12px;
     border: 1px solid var(--gray-100);
@@ -493,44 +363,148 @@ section {
     place-items: center;
     font-size: 1.25rem;
     font-weight: 700;
-    font-family: var(--font-secondary);
 }
 
-.step-card h3 {
+.step h3 {
     margin-bottom: var(--space-sm);
-    margin-top: var(--space-md);
 }
 
-.step-card p {
+.step p {
     color: var(--gray-600);
     line-height: 1.7;
     margin: 0;
 }
 
 /* ===========================================
-   World Builder Section
+   Monitor Section
    =========================================== */
 
-.world-builder {
+.monitor {
+    background: var(--cream);
+}
+
+.monitor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+.monitor-item {
+    padding: var(--space-xl);
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--gray-100);
+}
+
+.monitor-item strong {
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+}
+
+.monitor-item ul {
+    list-style: none;
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.monitor-item li {
+    color: var(--gray-600);
+    padding-left: var(--space-md);
+    position: relative;
+}
+
+.monitor-item li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--terra-gold);
+    font-weight: 700;
+}
+
+.monitor-note {
+    text-align: center;
+    color: var(--gray-900);
+    line-height: 1.7;
+}
+
+/* ===========================================
+   Starter Kits
+   =========================================== */
+
+.starter-kits {
     background: var(--white);
 }
 
-.world-builder-content {
-    max-width: 56rem;
-    margin-inline: auto;
-    text-align: center;
+.kits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
 }
 
-.world-builder-lead {
+.kit-card {
+    padding: var(--space-xl);
+    background: var(--cream);
+    border-radius: 12px;
+    border: 1px solid var(--gray-100);
+}
+
+.kit-card h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.kit-price {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--terra-green);
+    margin-bottom: var(--space-md);
+}
+
+.discount {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--terra-gold);
+    margin-top: var(--space-xs);
+}
+
+.kit-card p:last-child {
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.kits-note {
+    max-width: 48rem;
+    margin-inline: auto;
+    padding: var(--space-lg);
+    background: rgba(216, 182, 112, 0.1);
+    border-left: 4px solid var(--terra-gold);
+    border-radius: 8px;
+    color: var(--terra-green);
+    line-height: 1.7;
+}
+
+/* ===========================================
+   Builder Section
+   =========================================== */
+
+.builder {
+    background: var(--gray-50);
+}
+
+.builder-lead {
     font-size: clamp(1.0625rem, 2vw, 1.25rem);
     color: var(--gray-600);
+    text-align: center;
     margin-bottom: var(--space-2xl);
 }
 
 .builder-features {
     display: grid;
     gap: var(--space-xl);
-    text-align: left;
     margin-bottom: var(--space-xl);
 }
 
@@ -539,7 +513,7 @@ section {
     gap: var(--space-lg);
     align-items: flex-start;
     padding: var(--space-xl);
-    background: var(--cream);
+    background: var(--white);
     border-radius: 12px;
     border: 1px solid var(--gray-100);
 }
@@ -560,116 +534,51 @@ section {
 }
 
 .builder-closing {
-    font-size: 1.125rem;
     text-align: center;
-}
-
-/* ===========================================
-   What's Included Section
-   =========================================== */
-
-.included {
-    background: var(--gray-50);
-}
-
-.included-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-    gap: var(--space-xl);
-    margin-bottom: var(--space-2xl);
-}
-
-.included-card {
-    padding: var(--space-xl);
-    background: var(--white);
-    border-radius: 12px;
-    border: 1px solid var(--gray-100);
-    box-shadow: var(--shadow-sm);
-    transition: all var(--transition);
-}
-
-.included-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
-
-.included-card h4 {
-    margin-bottom: var(--space-sm);
-    font-size: 1.125rem;
-}
-
-.included-card p {
     color: var(--gray-600);
-    line-height: 1.7;
-    margin: 0;
-}
-
-.included-note {
-    max-width: 48rem;
-    margin-inline: auto;
-    padding: var(--space-lg);
-    background: rgba(216, 182, 112, 0.1);
-    border-left: 4px solid var(--terra-gold);
-    border-radius: 8px;
-}
-
-.included-note p {
-    color: var(--terra-green);
-    margin: 0;
+    font-style: italic;
 }
 
 /* ===========================================
-   Philosophy Section
+   Why Section
    =========================================== */
 
-.philosophy {
+.why {
     background: var(--cream);
 }
 
-.philosophy-lead {
-    font-size: clamp(1.0625rem, 2vw, 1.25rem);
-    text-align: center;
-    color: var(--gray-600);
-    line-height: 1.7;
-    max-width: 42rem;
-    margin-inline: auto;
-    margin-bottom: var(--space-2xl);
-}
-
-.philosophy-principles {
+.why-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: var(--space-xl);
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-xl);
 }
 
-.principle-card {
+.why-card {
     padding: var(--space-xl);
     background: var(--white);
     border-radius: 12px;
     border: 1px solid var(--gray-100);
-    text-align: center;
 }
 
-.principle-card h4 {
+.why-card h4 {
     margin-bottom: var(--space-sm);
 }
 
-.principle-card p {
+.why-card p {
     color: var(--gray-600);
     line-height: 1.7;
     margin: 0;
 }
 
-.philosophy-closing {
-    font-size: 1.125rem;
+.why-closing {
     text-align: center;
-    max-width: 42rem;
-    margin-inline: auto;
+    font-size: 1.125rem;
+    color: var(--gray-900);
 }
 
 /* ===========================================
-   Waitlist Section
+   Waitlist
    =========================================== */
 
 .waitlist {
@@ -686,7 +595,6 @@ section {
     background-repeat: repeat;
     background-size: 300px;
     opacity: 0.03;
-    pointer-events: none;
 }
 
 .waitlist-container {
@@ -695,9 +603,6 @@ section {
     padding-inline: var(--space-lg);
     position: relative;
     z-index: 1;
-}
-
-.waitlist-content {
     text-align: center;
 }
 
@@ -729,13 +634,8 @@ section {
     gap: var(--space-md);
 }
 
-.form-group {
-    display: grid;
-}
-
 .form-group input,
-.form-group select,
-.form-group textarea {
+.form-group select {
     width: 100%;
     padding: var(--space-sm) var(--space-md);
     font-family: var(--font-primary);
@@ -747,14 +647,12 @@ section {
     transition: all var(--transition);
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
+.form-group input::placeholder {
     color: rgba(255, 255, 255, 0.5);
 }
 
 .form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.form-group select:focus {
     outline: none;
     border-color: var(--terra-gold);
     background: rgba(255, 255, 255, 0.15);
@@ -770,12 +668,6 @@ section {
     padding-right: 3rem;
 }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 100px;
-    line-height: 1.6;
-}
-
 .form-note {
     text-align: center;
     color: rgba(255, 255, 255, 0.75);
@@ -785,7 +677,7 @@ section {
 }
 
 /* ===========================================
-   FAQ Section
+   FAQ
    =========================================== */
 
 .faq {
@@ -806,7 +698,6 @@ section {
 
 .faq-item h4 {
     margin-bottom: var(--space-sm);
-    color: var(--terra-green);
 }
 
 .faq-item p {
@@ -816,7 +707,7 @@ section {
 }
 
 /* ===========================================
-   Final CTA Section
+   Final CTA
    =========================================== */
 
 .final-cta {
@@ -904,20 +795,10 @@ section {
 }
 
 /* ===========================================
-   Responsive Refinements
+   Responsive
    =========================================== */
 
 @media (max-width: 640px) {
-    .hero-cta {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .hero-cta .btn-primary,
-    .hero-cta .btn-secondary {
-        width: 100%;
-    }
-    
     .builder-feature {
         flex-direction: column;
         text-align: center;
@@ -933,36 +814,25 @@ section {
 }
 
 @media (min-width: 768px) {
-    .conditions-grid {
+    .value-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .steps-grid {
+    .steps {
         grid-template-columns: repeat(2, 1fr);
     }
-}
-
-@media (min-width: 1024px) {
-    .conditions-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
     
-    .steps-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    
-    .included-grid {
+    .kits-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* ===========================================
-   Print Styles
-   =========================================== */
-
-@media print {
-    .hero-pattern,
-    .waitlist::before {
-        display: none;
+@media (min-width: 1024px) {
+    .value-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .steps {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
